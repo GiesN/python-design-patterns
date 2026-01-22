@@ -356,4 +356,31 @@ Provides functionality before and/or after calling an object.
 
 Patterns that deal with object interaction and responsibility.
 
-*Coming soon*
+### Chain of Responsibility
+
+Defines a chain of handlers to process a request, where each handler decides to process and/or pass it on.
+
+**Implementation**
+- [Chain of Responsibility](src/3_behavioural_design_patterns/1_chain_of_responsibility/1_chain_of_responsibility.py)
+
+**Use Cases**
+- Process requests through multiple handlers
+- Requests can be of different types
+- Handler order matters
+- Decouple sender from receiver
+
+**Structure**
+- Handler interface with reference to next handler
+- Concrete handlers implementing processing logic
+- Client initiating the request
+
+**Advantages**
+- Reduce coupling between sender and receiver
+- Add or remove handlers dynamically
+- Single responsibility principle
+- Open/closed principle
+
+**Disadvantages**
+- Request can go unhandled
+- Difficult to debug
+- No guarantee of request being processed
